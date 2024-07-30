@@ -12,7 +12,7 @@ with open("token.txt", "r") as file:
 # Models to check
 models = {
     # Galaxy S24
-    "SM-S9210": ["BRI", "CHC", "TGY"],
+    "SM-S9210": ["BRI", "CHC"],
     "SC-51E": ["DCM"],
     "SCG25": ["KDI"],
     "SM-S921Q": ["SJP"],
@@ -20,12 +20,12 @@ models = {
     "SM-S921U1": ["ATT"],
     "SM-S921W": ["BMC"],
     # Galaxy S24+
-    "SM-S9260": ["BRI", "CHC", "TGY"],
+    "SM-S9260": ["BRI", "CHC"],
     "SM-S926U": ["ATT"],
     "SM-S926U1": ["ATT"],
     "SM-S926W": ["BMC"],
     # Galaxy S24 Ultra
-    "SM-S9280": ["BRI", "CHC", "TGY"],
+    "SM-S9280": ["BRI", "CHC"],
     "SM-S928B": ["EUX"],
     "SC-52E": ["DCM"],
     "SCG26": ["KDI"],
@@ -35,7 +35,7 @@ models = {
     "SM-S928U1": ["ATT"],
     "SM-S928W": ["BMC"],
     # Galaxy Z Flip6
-    "SM-F7410": ["BRI", "CHC", "TGY"],
+    "SM-F7410": ["BRI", "CHC"],
     "SM-F741B": ["EUX"],
     "SC-54E": ["DCM"],
     "SCG29": ["KDI"],
@@ -45,7 +45,7 @@ models = {
     "SM-F741U1": ["ATT"],
     "SM-F741W": ["BMC"],
     # Galaxy Z Fold6
-    "SM-F9560": ["BRI", "CHC", "TGY"],
+    "SM-F9560": ["BRI", "CHC"],
     "SM-F956B": ["EUX"],
     "SC-55E": ["DCM"],
     "SCG28": ["KDI"],
