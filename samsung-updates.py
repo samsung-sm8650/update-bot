@@ -1,5 +1,5 @@
 #!/usr/bin/python3 -u
-from copy import copy
+from copy import deepcopy
 import json
 import requests
 import time
@@ -73,7 +73,7 @@ def sendmessage(text):
     requests.post(url, params)
 
 while True:
-    diff_updates = copy(updates)
+    diff_updates = deepcopy(updates)
     for model, csc_list in models.items():
         for csc in csc_list:
             url = "https://fota-cloud-dn.ospserver.net/firmware/" + csc + "/" + model +  "/version.xml"
@@ -88,6 +88,8 @@ while True:
                 fwver = version.text.split("/")
                 osver = version.attrib["o"]
 
+                print("Got version from API:", version.text)
+
                 try:
                     if updates[model][csc] != None:
                         for key, val in updates[model].items():
@@ -95,19 +97,22 @@ while True:
                                 if val == [fwver[0], fwver[1], osver]:
                                     print("Skipping already discovered update...")
                                     time.sleep(5)
-                                    continue
+                                else:
+                                    break
                         else:
                             break
                 except KeyError:
                     pass
+
                 print(f"New update found!\nModel: {model}\nAP: {fwver[0]}\nCSC: {fwver[1]} ({csc})\nAndroid version: {osver}\n")
                 sendmessage(f"<b>New update found!\nModel:</b> <code>{model}</code>\n<b>AP:</b> <code>{fwver[0]}</code>\n<b>CSC:</b> <code>{fwver[1]}</code> (<code>{csc}</code>)\n<b>Android version:</b> <code>{osver}</code>")
                 updates[model].update({csc: [fwver[0], fwver[1], osver]})
+
+                if diff_updates != updates:
+                    with open("samsung-versions.json", "w") as jsonfile:
+                        json.dump(updates, jsonfile, ensure_ascii=False, indent=4)
+
                 # Let's not overwhelm the APIs
                 time.sleep(5)
-
-    if diff_updates != updates:
-        with open("samsung-versions.json", "w") as jsonfile:
-            json.dump(updates, jsonfile, ensure_ascii=False, indent=4)
 
     time.sleep(1200)
