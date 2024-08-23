@@ -62,10 +62,14 @@ try:
         try:
             updates = json.load(jsonfile)
         except:
-            print("Error while reading samsung-versions.json")
+            error("Unable to read samsung-versions.json")
 except:
     updates = {}
-    print("samsung-version.json file not found.")
+    warning("File samsung-version.json not found")
+
+def info(text): print(f"\033[94mINFO: \033[00m{text}")
+def warning(text): print(f"\033[93mWARNING: \033[00m{text}")
+def error(text): print(f"\033[91mERROR: \033[00m{text}")
 
 def sendmessage(text):
     url = f"https://api.telegram.org/bot{token}/sendmessage"
@@ -77,25 +81,31 @@ while True:
     for model, csc_list in models.items():
         for csc in csc_list:
             url = "https://fota-cloud-dn.ospserver.net/firmware/" + csc + "/" + model +  "/version.xml"
-            response = urllib.request.urlopen(url).read()
+            try:
+                response = urllib.request.urlopen(url).read()
+            except:
+                warning(f"Unable to connect to {url}")
+                time.sleep(60)
+                break
             tree = ET.fromstring(response)
 
             for version in tree.iter("latest"):
                 if version.text == None:
-                    continue
+                    warning(f"No updates found for {model} ({csc})")
+                    break
                 if updates.get(model, None) == None:
                     updates[model] = {}
                 fwver = version.text.split("/")
                 osver = version.attrib["o"]
 
-                print("Got version from API:", version.text)
+                info(f"{fwver[0]}: Got version from API")
 
                 try:
                     if updates[model][csc] != None:
                         for key, val in updates[model].items():
                             if key == csc:
                                 if val == [fwver[0], fwver[1], osver]:
-                                    print("Skipping already discovered update...")
+                                    info(f"{fwver[0]}: Already discovered. Skipping")
                                     time.sleep(5)
                                 else:
                                     break
@@ -109,10 +119,12 @@ while True:
                 updates[model].update({csc: [fwver[0], fwver[1], osver]})
 
                 if diff_updates != updates:
+                    info("Updating samsung-versions.json")
                     with open("samsung-versions.json", "w") as jsonfile:
                         json.dump(updates, jsonfile, ensure_ascii=False, indent=4)
 
                 # Let's not overwhelm the APIs
                 time.sleep(5)
 
+    info("API scraping finished. Trying again in 20 minutes")
     time.sleep(1200)
