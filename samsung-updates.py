@@ -92,6 +92,7 @@ while True:
             for version in tree.iter("latest"):
                 if version.text == None:
                     warning(f"No updates found for {model} ({csc})")
+                    time.sleep(5)
                     break
                 if updates.get(model, None) == None:
                     updates[model] = {}
