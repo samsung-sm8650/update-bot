@@ -80,13 +80,13 @@ while True:
     diff_updates = deepcopy(updates)
     for model, csc_list in models.items():
         for csc in csc_list:
-            url = "https://fota-cloud-dn.ospserver.net/firmware/" + csc + "/" + model +  "/version.xml"
+            url = f"https://fota-cloud-dn.ospserver.net/firmware/{csc}/{model}/version.xml"
             try:
                 response = urllib.request.urlopen(url).read()
             except:
                 warning(f"Unable to connect to {url}")
                 time.sleep(60)
-                break
+                continue
             tree = ET.fromstring(response)
 
             for version in tree.iter("latest"):

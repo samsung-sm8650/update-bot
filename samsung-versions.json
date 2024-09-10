@@ -1,53 +1,53 @@
 {
     "SM-S9210": {
         "BRI": [
-            "S9210ZHS3AXGI",
-            "S9210OZS3AXGI",
+            "S9210ZHU3AXH7",
+            "S9210OZS3AXH7",
             "14"
         ],
         "CHC": [
-            "S9210ZCS3AXGJ",
-            "S9210CHC3AXGJ",
+            "S9210ZCU3AXH7",
+            "S9210CHC3AXH7",
             "14"
         ]
     },
     "SM-S926U": {
         "ATT": [
-            "S926USQS3AXFJ",
-            "S926UOYN3AXFJ",
+            "S926USQU3AXH7",
+            "S926UOYN3AXH7",
             "14"
         ]
     },
     "SM-S926U1": {
         "ATT": [
-            "S926U1UES3AXFJ",
-            "S926U1OYM3AXFJ",
+            "S926U1UEU3AXH7",
+            "S926U1OYM3AXH7",
             "14"
         ]
     },
     "SM-S926W": {
         "BMC": [
-            "S926WVLS3AXFC",
-            "S926WOYV3AXFC",
+            "S926WVLU3AXH7",
+            "S926WOYV3AXH7",
             "14"
         ]
     },
     "SM-S9280": {
         "BRI": [
-            "S9280ZHS3AXGI",
-            "S9280OZS3AXGI",
+            "S9280ZHU3AXH7",
+            "S9280OZS3AXH7",
             "14"
         ],
         "CHC": [
-            "S9280ZCS3AXGJ",
-            "S9280CHC3AXGJ",
+            "S9280ZCU3AXH7",
+            "S9280CHC3AXH7",
             "14"
         ]
     },
     "SM-S928B": {
         "EUX": [
-            "S928BXXS3AXGF",
-            "S928BOXM3AXGF",
+            "S928BXXU3AXH7",
+            "S928BOXM3AXH7",
             "14"
         ]
     },
@@ -60,15 +60,15 @@
     },
     "SCG26": {
         "KDI": [
-            "SCG26KDS1AXE1",
-            "SCG26QDI1AXE1",
+            "SCG26KDU1AXH5",
+            "SCG26QDI1AXH5",
             "14"
         ]
     },
     "SM-S928N": {
         "KOO": [
-            "S928NKSS3AXGJ",
-            "S928NOKR3AXGJ",
+            "S928NKSU3AXH7",
+            "S928NOKR3AXH7",
             "14"
         ]
     },
@@ -81,22 +81,22 @@
     },
     "SM-S928U": {
         "ATT": [
-            "S928USQS3AXFJ",
-            "S928UOYN3AXFJ",
+            "S928USQU3AXH7",
+            "S928UOYN3AXH7",
             "14"
         ]
     },
     "SM-S928U1": {
         "ATT": [
-            "S928U1UES3AXFJ",
-            "S928U1OYM3AXFJ",
+            "S928U1UEU3AXH7",
+            "S928U1OYM3AXH7",
             "14"
         ]
     },
     "SM-S928W": {
         "BMC": [
-            "S928WVLS3AXFC",
-            "S928WOYV3AXFC",
+            "S928WVLU3AXH7",
+            "S928WOYV3AXH7",
             "14"
         ]
     },
@@ -109,8 +109,8 @@
     },
     "SCG25": {
         "KDI": [
-            "SCG25KDS1AXE1",
-            "SCG25QDI1AXE1",
+            "SCG25KDU1AXH5",
+            "SCG25QDI1AXH5",
             "14"
         ]
     },
@@ -123,48 +123,128 @@
     },
     "SM-S921U": {
         "ATT": [
-            "S921USQS3AXFJ",
-            "S921UOYN3AXFJ",
+            "S921USQU3AXH7",
+            "S921UOYN3AXH7",
             "14"
         ]
     },
     "SM-S921U1": {
         "ATT": [
-            "S921U1UES3AXFJ",
-            "S921U1OYM3AXFJ",
+            "S921U1UEU3AXH7",
+            "S921U1OYM3AXH7",
             "14"
         ]
     },
     "SM-S921W": {
         "BMC": [
-            "S921WVLS3AXFC",
-            "S921WOYV3AXFC",
+            "S921WVLU3AXH7",
+            "S921WOYV3AXH7",
             "14"
         ]
     },
     "SM-S9260": {
         "BRI": [
-            "S9260ZHS3AXGI",
-            "S9260OZS3AXGI",
+            "S9260ZHU3AXH7",
+            "S9260OZS3AXH7",
             "14"
         ],
         "CHC": [
-            "S9260ZCS3AXGJ",
-            "S9260CHC3AXGJ",
+            "S9260ZCU3AXH7",
+            "S9260CHC3AXH7",
             "14"
         ]
     },
     "SM-F741N": {
         "KOO": [
-            "F741NKSU1AXH7",
-            "F741NOKR1AXH7",
+            "F741NKSS1AXHC",
+            "F741NOKR1AXHC",
             "14"
         ]
     },
     "SM-F956N": {
         "KOO": [
-            "F956NKSU1AXH7",
-            "F956NOKR1AXH7",
+            "F956NKSS1AXHC",
+            "F956NOKR1AXHC",
+            "14"
+        ]
+    },
+    "SM-F956W": {
+        "BMC": [
+            "F956WVLS1AXHB",
+            "F956WOYV1AXHB",
+            "14"
+        ]
+    },
+    "SM-F741W": {
+        "BMC": [
+            "F741WVLS1AXHC",
+            "F741WOYV1AXHC",
+            "14"
+        ]
+    },
+    "SM-F741U1": {
+        "ATT": [
+            "F741U1UES1AXHC",
+            "F741U1OYM1AXHC",
+            "14"
+        ]
+    },
+    "SM-F956U1": {
+        "ATT": [
+            "F956U1UES1AXHB",
+            "F956U1OYM1AXHB",
+            "14"
+        ]
+    },
+    "SM-F741U": {
+        "ATT": [
+            "F741USQS1AXHC",
+            "F741UOYN1AXHC",
+            "14"
+        ]
+    },
+    "SM-F956U": {
+        "ATT": [
+            "F956USQS1AXHB",
+            "F956UOYN1AXHB",
+            "14"
+        ]
+    },
+    "SM-F7410": {
+        "CHC": [
+            "F7410ZCS1AXHB",
+            "F7410CHC1AXHB",
+            "14"
+        ],
+        "BRI": [
+            "F7410ZSS1AXHB",
+            "F7410OZS1AXHB",
+            "14"
+        ]
+    },
+    "SM-F741B": {
+        "EUX": [
+            "F741BXXS1AXHD",
+            "F741BOXM1AXH7",
+            "14"
+        ]
+    },
+    "SM-F9560": {
+        "BRI": [
+            "F9560ZSS1AXHB",
+            "F9560OZS1AXHB",
+            "14"
+        ],
+        "CHC": [
+            "F9560ZCS1AXHB",
+            "F9560CHC1AXHB",
+            "14"
+        ]
+    },
+    "SM-F956B": {
+        "EUX": [
+            "F956BXXS1AXHD",
+            "F956BOXM1AXH7",
             "14"
         ]
     }
