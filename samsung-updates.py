@@ -44,6 +44,7 @@ models = {
     "SM-F741U": ["ATT"],
     "SM-F741U1": ["ATT"],
     "SM-F741W": ["BMC"],
+    "SM-W7025": ["CHC"],
     # Galaxy Z Fold6
     "SM-F9560": ["BRI", "CHC"],
     "SM-F956B": ["EUX"],
@@ -54,6 +55,9 @@ models = {
     "SM-F956U": ["ATT"],
     "SM-F956U1": ["ATT"],
     "SM-F956W": ["BMC"],
+    # Galaxy Z Fold Special Edition
+    "SM-F958N": ["KOO"],
+    "SM-W9025": ["CHC"],
 }
 
 # JSON file with known updates
