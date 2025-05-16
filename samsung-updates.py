@@ -2,12 +2,22 @@
 from copy import deepcopy
 import json
 import requests
+import sys
 import time
 import urllib.request
 import xml.etree.ElementTree as ET
 
-with open("token.txt", "r") as file:
-    token = file.read().rstrip("\n")
+def info(text): print(f"\033[94mINFO: \033[00m{text}")
+def warning(text): print(f"\033[93mWARNING: \033[00m{text}")
+def error(text): print(f"\033[91mERROR: \033[00m{text}")
+
+try:
+    with open(sys.argv[1], "r") as file:
+        token = file.read().rstrip("\n")
+except Exception as e:
+    info("Usage: samsung-updates.py <Path to bot token>")
+    print(e)
+    quit()
 
 # Models to check
 models = {
@@ -71,11 +81,7 @@ except:
     updates = {}
     warning("File samsung-version.json not found")
 
-def info(text): print(f"\033[94mINFO: \033[00m{text}")
-def warning(text): print(f"\033[93mWARNING: \033[00m{text}")
-def error(text): print(f"\033[91mERROR: \033[00m{text}")
-
-def sendmessage(text):
+def sendmessage(text, token):
     url = f"https://api.telegram.org/bot{token}/sendmessage"
     params = {"chat_id": "@samsung_sm8650_updates", "parse_mode": "HTML", "text": text}
     requests.post(url, params)
@@ -120,7 +126,7 @@ while True:
                     pass
 
                 print(f"New update found!\nModel: {model}\nAP: {fwver[0]}\nCSC: {fwver[1]} ({csc})\nAndroid version: {osver}\n")
-                sendmessage(f"<b>New update found!\nModel:</b> <code>{model}</code>\n<b>AP:</b> <code>{fwver[0]}</code>\n<b>CSC:</b> <code>{fwver[1]}</code> (<code>{csc}</code>)\n<b>Android version:</b> <code>{osver}</code>")
+                sendmessage(f"<b>New update found!\nModel:</b> <code>{model}</code>\n<b>AP:</b> <code>{fwver[0]}</code>\n<b>CSC:</b> <code>{fwver[1]}</code> (<code>{csc}</code>)\n<b>Android version:</b> <code>{osver}</code>", token)
                 updates[model].update({csc: [fwver[0], fwver[1], osver]})
 
                 if diff_updates != updates:
