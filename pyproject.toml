@@ -1,0 +1,9 @@
+[project]
+name = "samsung-update-bot"
+version = "0.0.1"
+dependencies = [
+    "requests",
+]
+
+[project.scripts]
+samsung-update-bot = "samsung_update_bot:main"
